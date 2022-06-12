@@ -1,33 +1,15 @@
-from asyncio.windows_events import NULL
-import tkinter as tk
-from tkinter import ttk
 
+import tkinter as tk
 import tensorflow as tf
 import tensorflow_hub as hub
-
-# For downloading the image.
-import matplotlib.pyplot as plt
-import tempfile
-from six import BytesIO
-
-# For drawing onto the image.
-import numpy as np
 from PIL import Image
-from PIL import ImageColor
-from PIL import ImageDraw
-from PIL import ImageFont
-from PIL import ImageOps
-
 # For measuring the inference time.
 import time
-import sys
-import os
 from tkinter import *
-from tkinter import messagebox,filedialog, scrolledtext
-from turtle import bgcolor, color, width
-import numpy as np
+from tkinter import filedialog
 from PIL import Image, ImageTk
 import cv2
+
 
 
 
@@ -37,7 +19,7 @@ class Application(tk.Frame):
         self.pack()
         self.master.geometry("642x640")
         self.master.configure(bg='white')
-        self.master.title("Pic2Pick")
+        self.master.title("Pic2Peak")
         
         self.create_widgets()
 
@@ -70,11 +52,6 @@ class Application(tk.Frame):
         self.messagebox.pack(side=tk.BOTTOM)
 
 
-
-   
-
-
-        
 
     # Event Call Back
     def startConvert(self):
